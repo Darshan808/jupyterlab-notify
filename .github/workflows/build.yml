@@ -59,6 +59,11 @@ jobs:
         jupyter server extension list
         jupyter server extension list 2>&1 | grep -ie "jupyterlab_notify.*OK"
 
+    - name: Check that all endpoints are authenticated
+      run: |
+        set -eux
+        python .github/scripts/check_auth.py
+
     - name: Check the extension against JupyterLab
       run: |
         set -eux

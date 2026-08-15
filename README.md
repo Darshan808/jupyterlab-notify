@@ -195,6 +195,18 @@ By default, the `jlpm run build` command generates the source maps for this exte
 jupyter lab build --minimize=False
 ```
 
+### Endpoint authentication
+
+Every verb method of every handler in `jupyterlab_notify/handlers.py` must carry a
+`@tornado.web.authenticated` decorator, or, if the endpoint is meant to be public, an
+explicit `@allow_unauthenticated`/`@ws_authenticated` decorator from
+`jupyter_server.auth.decorator`. The `Build and publish to PyPI` workflow enforces this
+by running:
+
+```bash
+python .github/scripts/check_auth.py
+```
+
 ### Uninstall
 
 ```bash
