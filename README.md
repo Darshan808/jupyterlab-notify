@@ -162,17 +162,17 @@ The `jlpm` command is JupyterLab's pinned version of
 ```bash
 # Clone the repo to your local environment
 # Change directory to the jupyterlab_notify directory
-# Install package in development mode
-pip install -e .
+# Install the build tool (jupyter-builder) and JupyterLab itself
+pip install -e .[dev]
 
 # If you need server-side execution dependencies, install with:
 pip install -e .[server-side-execution]
 
 # If you want to install test dependencies as well, use:
-pip install -e .[tests]
+pip install -e .[test]
 
 # Link your development version of the extension with JupyterLab
-jupyter-labextension develop . --overwrite
+jupyter-builder develop . --overwrite
 
 # Rebuild extension Typescript source after making changes
 jlpm run build
