@@ -1,25 +1,26 @@
 [build-system]
-requires = ["hatchling>=1.5.0", "hatch-nodejs-version", "jupyter-builder>=1.2.0,<2"]
+requires = ["hatchling>=1.27.0", "hatch-nodejs-version", "jupyter-builder>=1.2.0,<2"]
 build-backend = "hatchling.build"
 
 [project]
 name = "jupyterlab_notify"
 readme = "README.md"
-license = { file = "LICENSE.txt" }
-requires-python = ">=3.8"
+license = "BSD-3-Clause"
+license-files = ["LICENSE.txt"]
+requires-python = ">=3.10"
 classifiers = [
     "Framework :: Jupyter",
     "Framework :: Jupyter :: JupyterLab",
     "Framework :: Jupyter :: JupyterLab :: 4",
     "Framework :: Jupyter :: JupyterLab :: Extensions",
     "Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt",
-    "License :: OSI Approved :: BSD License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
 ]
 dependencies = [
     "jupyter_server>=2.13.0,<3",
@@ -55,6 +56,7 @@ exclude = [".github", "binder"]
 
 [tool.hatch.build.targets.wheel.shared-data]
 "jupyterlab_notify/labextension" = "share/jupyter/labextensions/jupyterlab-notify"
+"install.json" = "share/jupyter/labextensions/jupyterlab-notify/install.json"
 "jupyter-config/server-config" = "etc/jupyter/jupyter_server_config.d"
 "jupyter-config/nb-config" = "etc/jupyter/jupyter_notebook_config.d"
 

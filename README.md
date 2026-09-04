@@ -13,7 +13,7 @@ The `jupyterlab-notify` extension allows you to receive notifications about cell
 > JupyterLab Notify v3 supports `jupyter-server-nbmodel`(>= v0.1.1a2), enabling notifications to work even after the browser has been closed. To enable browser-less notification support, install JupyterLab Notify with server-side execution dependencies using:
 >
 > ```bash
-> pip install jupyterlab-notify[server-side-execution]
+> pip install "jupyterlab-notify[server-side-execution]"
 > ```
 >
 > JupyterLab Notify v3 requires execution timing data, so it automatically sets `record_timing` to true in the notebook settings.
@@ -146,7 +146,7 @@ pip install jupyterlab_notify
 To install with server-side execution dependencies run
 
 ```bash
-pip install jupyterlab_notify[server-side-execution]
+pip install "jupyterlab_notify[server-side-execution]"
 ```
 
 ## Contributing
@@ -163,13 +163,13 @@ The `jlpm` command is JupyterLab's pinned version of
 # Clone the repo to your local environment
 # Change directory to the jupyterlab_notify directory
 # Install the build tool (jupyter-builder) and JupyterLab itself
-pip install -e .[dev]
+pip install -e ".[dev]"
 
 # If you need server-side execution dependencies, install with:
-pip install -e .[server-side-execution]
+pip install -e ".[server-side-execution]"
 
 # If you want to install test dependencies as well, use:
-pip install -e .[test]
+pip install -e ".[test]"
 
 # Link your development version of the extension with JupyterLab
 jupyter-builder develop . --overwrite
