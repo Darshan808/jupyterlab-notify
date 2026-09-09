@@ -925,11 +925,12 @@ const plugin: JupyterFrontEndPlugin<void> = {
           }
         }
         const timeoutOptions: ITimeoutPromptOptions = {
-          title: 'Set Notebook Custom Timeout',
-          label: 'Custom timeout value with unit:',
+          title: trans.__('Set Notebook Custom Timeout'),
+          label: trans.__('Custom timeout value with unit:'),
           placeholder: '30',
-          errorMessage:
+          errorMessage: trans.__(
             'Please enter a positive number and select a unit (seconds, minutes, or hours).',
+          ),
           defaultValue: value,
           defaultUnit: unit,
         };
@@ -991,11 +992,12 @@ const plugin: JupyterFrontEndPlugin<void> = {
           }
         }
         const thresholdOptions: ITimeoutPromptOptions = {
-          title: 'Set Notebook Default Threshold',
-          label: 'Default Threshold value with unit:',
+          title: trans.__('Set Notebook Default Threshold'),
+          label: trans.__('Default Threshold value with unit:'),
           placeholder: '30',
-          errorMessage:
+          errorMessage: trans.__(
             'Please enter a positive number and select a unit (seconds, minutes, or hours).',
+          ),
           defaultValue: value,
           defaultUnit: unit,
         };
@@ -1053,11 +1055,12 @@ const plugin: JupyterFrontEndPlugin<void> = {
         }
         const { value: input } = await promptForTimeout(
           {
-            title: 'Set Custom Timeout',
-            label: 'Custom timeout value with unit:',
+            title: trans.__('Set Custom Timeout'),
+            label: trans.__('Custom timeout value with unit:'),
             placeholder: '30',
-            errorMessage:
+            errorMessage: trans.__(
               'Please enter a positive number and select a unit (seconds, minutes, or hours).',
+            ),
             defaultValue: value,
             defaultUnit: unit,
           } as ITimeoutPromptOptions,

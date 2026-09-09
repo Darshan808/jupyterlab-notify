@@ -361,7 +361,7 @@ export async function promptForTimeout(
   translator?: ITranslator,
 ): Promise<{ value: string | null; applyToAll: boolean }> {
   translator = translator || nullTranslator;
-  const trans = translator.load('jupyterlab');
+  const trans = translator.load('jupyterlab-notify');
   const timeResult = await TimeInputDialog.getText({
     title: options.title,
     label: options.label,
